@@ -13,7 +13,6 @@ var numUniqueEmails = function(emails) {
     // return set.size
     
     // Found it in discussion: just submit it to see runtime and memory
-    // Runtime: 66 ms, faster than 94.74% of JavaScript online submissions <3
     return (new Set(emails.map(email => {
     const [local, domain] = email.split('@');
     return local.split('+').shift().split('.').join('') + '@' + domain;
