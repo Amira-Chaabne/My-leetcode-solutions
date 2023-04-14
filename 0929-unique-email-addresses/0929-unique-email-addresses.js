@@ -3,12 +3,17 @@
  * @return {number}
  */
 var numUniqueEmails = function(emails) {
-    let set = new Set()
-    for(let email of emails){
-        let localName = email.split("@")
-        localName[0] = (localName[0].split("+"))[0]
-        localName[0] = localName[0].replace(/\./g, "")
-        set.add(localName.join("@"));        
-    }
-    return set.size
+    // let set = new Set()
+    // for(let email of emails){
+        // let splitted = email.split("@")
+        // splitted[0] = (splitted[0].split("+"))[0]
+        // splitted[0] = splitted[0].replace(/\./g, "")
+        // set.add(splitted.join("@"));        
+    // }
+    // return set.size
+    
+    return (new Set(emails.map(email => {
+    const [local, domain] = email.split('@');
+    return local.split('+').shift().split('.').join('') + '@' + domain;
+    }))).size;
 };
