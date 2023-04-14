@@ -12,7 +12,6 @@ var numUniqueEmails = function(emails) {
     // }
     // return set.size
     
-    // Found it in discussion: just submit it to see runtime and memory
     return (new Set(emails.map(email => {
     const [local, domain] = email.split('@');
     return local.split('+').shift().split('.').join('') + '@' + domain;
