@@ -12,5 +12,4 @@ var uniqueOccurrences = function(arr) {
   let values = Object.values(obj)
   // Create a unique arr and compare it to the initial ( array of values )
   return [...new Set(values)].length === values.length
-
 };
