@@ -3,9 +3,9 @@
  * @return {number}
  */
 var maximumWealth = function(accounts) {
-    let sums = [] // initialize an empty array
-    for(let a of accounts){ // map over the accounts array
-      sums.push(a.reduce((a, b) => a + b, 0)) // reduce the nest array to one number ( the sum )
+    let sums = []
+    for(let a of accounts){
+      sums.push(a.reduce((a, b) => a + b, 0))
     }
-    return Math.max(...sums) // return the biggest number
+    return Math.max(...sums)
 };
