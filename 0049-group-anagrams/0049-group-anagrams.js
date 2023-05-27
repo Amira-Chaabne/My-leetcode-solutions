@@ -9,9 +9,8 @@ function groupAnagrams(strs){
     //    return map;
   //  }, {});
    // return Object.values(wordsMap);
-      let map = {}
-
   
+  let map = {}
   for(let s of strs){
     const key = s.split("").sort().join("")
     if(map[key]){
