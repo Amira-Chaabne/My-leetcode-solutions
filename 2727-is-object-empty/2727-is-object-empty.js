@@ -3,6 +3,5 @@
  * @return {boolean}
  */
 var isEmpty = function(obj) {
-  const keys = Object.keys(obj)
-    return keys.length === 0
+    return Object.keys(obj).length === 0
 };
