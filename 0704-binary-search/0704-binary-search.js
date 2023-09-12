@@ -4,7 +4,7 @@
  * @return {number}
  */
 var search = function(nums, target) {
-  // Brut force solution
+  // Brut force solution ( with time complexity: O(n) )
     for(let i = 0; i < nums.length; i++){
         if(nums[i] === target) {
             return i;
