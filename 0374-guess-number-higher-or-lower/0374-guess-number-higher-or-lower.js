@@ -13,7 +13,7 @@
  */
 var guessNumber = function(n) {
     for(let i = 1; i <= n; i++) {
-        if(guess(i) == 0) {
+        if(guess(i) === 0) {
             return i;
         }
     }
