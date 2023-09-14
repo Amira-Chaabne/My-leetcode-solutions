@@ -12,9 +12,27 @@
  * @return {number}
  */
 var guessNumber = function(n) {
-    for(let i = 1; i <= n; i++) {
-        if(guess(i) === 0) {
-            return i;
+  // Brut force solution
+   // for(let i = 1; i <= n; i++) {
+        //if(guess(i) === 0) {
+       //     return i;
+      //  }
+   // }
+  
+  // Binary search solution
+    let low = 1;
+    let high = n;
+
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+        let result = guess(mid);
+
+        if (result == 0) {
+            return mid;
+        } else if (result == -1) {
+            high = mid - 1;
+        } else if (result == 1) {
+            low = mid + 1;
         }
     }
-};
+  };
