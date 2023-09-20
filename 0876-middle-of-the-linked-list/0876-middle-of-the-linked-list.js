@@ -10,7 +10,8 @@
  * @return {ListNode}
  */
 var middleNode = function(head) {
-    let current = head;
+// Brut force solution
+    /**let current = head;
     let length = 0;
     while (current !== null) {
         length++;
@@ -21,5 +22,16 @@ var middleNode = function(head) {
     for (let i = 0; i < middle; i++) {
         current = current.next;
     }
-    return current;
+    return current;*/
+    
+  // Using linked list
+  let slow = head;
+    let fast = head;
+    
+    while (fast !== null && fast.next !== null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    
+    return slow;
 };
