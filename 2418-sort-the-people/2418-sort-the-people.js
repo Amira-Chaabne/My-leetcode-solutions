@@ -8,4 +8,5 @@ var sortPeople = function(names, heights) {
         .map((s, i) => [s, heights[i]])
         .sort((a, b) => b[1] - a[1])
         .map(([v]) => v);
+    
 };
