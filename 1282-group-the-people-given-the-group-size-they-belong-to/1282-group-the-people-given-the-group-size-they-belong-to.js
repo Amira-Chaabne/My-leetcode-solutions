@@ -8,9 +8,7 @@ var groupThePeople = function(groupSizes) {
     
     for (let i = 0; i < groupSizes.length; i++) {
         const size = groupSizes[i];
-        
-        console.log(groupMap[size])
-        
+                
         if (!groupMap[size]) {
             groupMap[size] = [];
         }
